@@ -14,7 +14,7 @@ Given:
 - $F$ = feature output of layer $l$ of the reconstucted image
 
 Content loss can be written in the following expression:
-- $L_{\text{content}} = \frac{1}{K_l H_l W_l} \sum_{i, j, k} (F^l_{ijk} - P^l_{ijk})^2$ where $K_l$ = number of filters $H_l$ = feature's height $W_l$ = feature's width
+- $$L_{\text{content}} = \frac{1}{K_l H_l W_l} \sum_{i, j, k} (F^l_{ijk} - P^l_{ijk})^2$$ where $K_l$ = number of filters $H_l$ = feature's height $W_l$ = feature's width
 
 ### Style Loss
 
