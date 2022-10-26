@@ -62,3 +62,5 @@ $L_{\text{total}} = \alpha L_{\text{content}} + \beta L_{\text{style}} + \gamma 
 ### Initializing a target image with random noise vs. a copy of the original image 
 
 ### Effect of $\beta$ to the generated image
+
+{% include lib/mathjax.html %}
