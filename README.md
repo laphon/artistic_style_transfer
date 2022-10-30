@@ -59,8 +59,39 @@ $$L_{\text{total}} = \alpha L_{\text{content}} + \beta L_{\text{style}} + \gamma
 
 ## Results and Experiments
 
-### Initializing a target image with random noise vs. a copy of the original image 
+##### **Content Image**
+<img src="imgs/pic6.jpg" height=200><br>
+<sub><sup>retrieved from nbcnews.com</sup></sub>
+### Tuning style weight
+<img src="results/beta_range.png">
 
-### Effect of $$\beta$$ to the generated image
+### Tuning total variantion loss weight
+<img src="results/tv_range.png">
+
+### Initializing with random noise vs a copy of the content image
+
+##### **Style Image 1**
+<img src="imgs/style3.jpg" height=200><br>
+<sub><sup>retrieved from fineartamerica.com</sup></sub>
+
+##### **Result**
+<img src="results/prog_style1.png">
+
+##### **Style Image 2**
+<img src="imgs/style5.jpg" height=200><br>
+<sub><sup>The Starry Night retrieved from sanctuarymentalhealth.org</sup></sub>
+
+##### **Result**
+<img src="results/prog_style2.png">
+
+##### **My own artwork style**
+<img src="imgs/pic4.jpg" height=300>
+
+##### **Result**
+<img src="results/prog_my_art.png">
+
+##### **Loss**
+<img src="results/loss.png">
+
 
 {% include lib/mathjax.html %}
