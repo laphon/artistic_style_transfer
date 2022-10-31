@@ -88,30 +88,30 @@ A larger weight to total variation loss produces a smoother reconstruted image.
 
 ### Initializing with random noise vs a copy of the content image
 
-##### **Style Image 1**
+#### **Style Image 1**
 <img src="imgs/style3.jpg" height=200><br>
 <sub><sup>retrieved from fineartamerica.com</sup></sub>
 
-##### **Result**
-<img src="results/prog_style1.png">
+#### **Result**
+<img src="results/prog_style1.png" height=300>
 
-##### **Style Image 2**
+#### **Style Image 2**
 <img src="imgs/style5.jpg" height=200><br>
 <sub><sup>The Starry Night retrieved from sanctuarymentalhealth.org</sup></sub>
 
-##### **Result**
-<img src="results/prog_style2.png">
+#### **Result**
+<img src="results/prog_style2.png" height=300>
 
-##### **My own artwork style**
+#### **My own artwork style**
 
 This is my own artwork I tested it out just for fun.
 
 <img src="imgs/pic4.jpg" height=300>
 
-##### **Result**
-<img src="results/prog_my_art.png">
+#### **Result**
+<img src="results/prog_my_art.png" height=300>
 
-##### **Loss**
+#### **Loss**
 <img src="results/loss.png">
 
 As observed, initializing a reconstructed image with a copy of the content image helps boost the recontruction process and reach the optimal point faster while producing an image that captures the content of the original image better. 
