@@ -1,8 +1,13 @@
 # Neural Style Transfer
 
-## Background
-features
+## Introduction
+
 The idea of artistic style transfer is to minimize content loss and style loss between the reconstructed image and the original image.
+
+The implementation of this project is based on this paper - [Image Style Transfer Using Convolutional Neural Networks](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf) using a pretrained VGG19 model for feature encoding. I have also tried using EfficientNet-B0 for feature encoding but did not produce good results compared to traditional VGG19. In this project in addition to initializing a reconstructed image with random noise like the other projects have commonly done, I decided to also initialize with a copy of a content image and observe any different results.
+
+Almost all the implementation in this project is mine except the total variation loss which I refer from this Pytorch forum - [
+Implement total variation loss in pytorch](https://discuss.pytorch.org/t/implement-total-variation-loss-in-pytorch/55574).
 
 ### Content Loss
 
@@ -49,9 +54,15 @@ $$L_{\text{total}} = \alpha L_{\text{content}} + \beta L_{\text{style}} + \gamma
 
 ## Methodology
 
-- Style representations are computed from feature outputs of the first layer and all the max-pool activations in the network (conv1_2 and activated outputs of conv1_2, conv2_2, conv3_4, conv4_4, conv5_4).
+- Style representations are computed from feature outputs of the first layer and all the max-pool activations in a pretrained VGG19 network (`conv1_2` and activated outputs of `conv1_2`, `conv2_2`, `conv3_4`, `conv4_4`, `conv5_4`) according to the model architecture below.
 
-- Content is defined by an activated output of conv3_4
+<img src="imgs/vgg19.jpg" height=400><br>
+
+<sub><sup>Illustration of VGG19's model architecture from 
+<a href="https://www.researchgate.net/figure/llustration-of-the-network-architecture-of-VGG-19-model-conv-means-convolution-FC-means_fig2_325137356">ResearchGate</a>
+</sup></sub>
+
+- Content is defined by an activated output of `conv3_4`
 
 - The reconstructed image is either initialized as random noise or a copy of the original image.
 
@@ -62,10 +73,17 @@ $$L_{\text{total}} = \alpha L_{\text{content}} + \beta L_{\text{style}} + \gamma
 ##### **Content Image**
 <img src="imgs/pic6.jpg" height=200><br>
 <sub><sup>retrieved from nbcnews.com</sup></sub>
+
 ### Tuning style weight
+
+A larger weight to style loss produces a reconstructed image more resembling the style image than the content image.
+
 <img src="results/beta_range.png">
 
-### Tuning total variantion loss weight
+### Tuning total variation loss weight
+
+A larger weight to total variation loss produces a smoother reconstruted image.
+
 <img src="results/tv_range.png">
 
 ### Initializing with random noise vs a copy of the content image
@@ -85,6 +103,9 @@ $$L_{\text{total}} = \alpha L_{\text{content}} + \beta L_{\text{style}} + \gamma
 <img src="results/prog_style2.png">
 
 ##### **My own artwork style**
+
+This is my own artwork I tested it out just for fun.
+
 <img src="imgs/pic4.jpg" height=300>
 
 ##### **Result**
@@ -92,6 +113,8 @@ $$L_{\text{total}} = \alpha L_{\text{content}} + \beta L_{\text{style}} + \gamma
 
 ##### **Loss**
 <img src="results/loss.png">
+
+As observed, initializing a reconstructed image with a copy of the content image helps boost the recontruction process and reach the optimal point faster while producing an image that captures the content of the original image better. 
 
 
 {% include lib/mathjax.html %}
