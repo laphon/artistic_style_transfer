@@ -100,7 +100,7 @@ A larger weight to total variation loss produces a smoother reconstruted image.
 <sub><sup>The Starry Night retrieved from sanctuarymentalhealth.org</sup></sub>
 
 #### **Result**
-<img src="results/prog_style2.png"0>
+<img src="results/prog_style2.png">
 
 #### **My own artwork style**
 
