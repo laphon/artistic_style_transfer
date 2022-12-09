@@ -1,5 +1,7 @@
 # Neural Style Transfer
 
+<a href="https://www.loom.com/share/ce0c5ba41aab41449a9092930b9b70f5">Link to video presentation</a>
+
 ## Introduction
 
 The idea of artistic style transfer is to minimize content loss and style loss between the reconstructed image and the original image.
