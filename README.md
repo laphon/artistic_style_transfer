@@ -1,6 +1,6 @@
 # Neural Style Transfer
 
-<a href="https://www.loom.com/share/ce0c5ba41aab41449a9092930b9b70f5">Link to video presentation</a>
+<a href="https://www.loom.com/share/ce0c5ba41aab41449a9092930b9b70f5">Link to video presentatio</a>
 
 ## Introduction
 
